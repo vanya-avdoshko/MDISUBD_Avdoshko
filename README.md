@@ -96,15 +96,13 @@
    - action_type: string
    - created_at: time
 
-10. **Message**
+10. **UserProfile**
     - id: int
-    - sender: User
-    - receiver: User
-    - content: string
-    - created_at: time
-
+    - user: userId
+    - name: string
+    - surname: string
+    
 ## Ненормализованная инфологическая модель БД
 ![Модель БД](plantuml.svg)
 
-## Теоретические знания по теме лабораторной
 
