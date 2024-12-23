@@ -36,6 +36,12 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+
+CREATE TRIGGER update_player_statistics_trigger
+AFTER INSERT OR UPDATE ON PlayerMatch
+FOR EACH ROW
+EXECUTE FUNCTION update_points_playerstatistics();
+
 --триггер для пересчета очков
 CREATE TRIGGER calculate_points_playerstatistics
 BEFORE INSERT OR UPDATE ON PlayerStatistics
